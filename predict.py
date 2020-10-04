@@ -28,10 +28,24 @@ class dogcat:
         result = model.predict(test_image)
 
         if result[0][0] == 1:
-            prediction = 'dog'
-            return [{ "image" : prediction}]
+            prediction = 'Banana'
+            print(prediction)
+            return [{"image": prediction}]
+        elif result[0][1] == 1:
+            prediction = 'Cherry Rainier'
+            print(prediction)
+            return [{"image": prediction}]
+        elif result[0][2] == 1:
+            prediction = 'Grape Blue'
+            print(prediction)
+            return [{"image": prediction}]
+        elif result[0][3] == 1:
+            prediction = 'Guava'
+            print(prediction)
+            return [{"image": prediction}]
         else:
-            prediction = 'cat'
-            return [{ "image" : prediction}]
+            prediction = 'Lemon'
+            print(prediction)
+            return [{"image": prediction}]
 
 
